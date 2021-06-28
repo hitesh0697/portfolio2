@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .top-bar {
+            height: 50px;
+        }
+
+        .top-bar h3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .navbar {
+            background-color: #f44336;
+            height: 55px;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        }
+
+        .navbar .left {
+            margin-left: 30px;
+        }
+
+        .navbar .right {
+            margin-right: 20px;
+        }
+
+
+        .navbar li {
+            list-style: none;
+            display: inline-block;
+        }
+
+        .navbar a {
+            line-height: 55px;
+            text-decoration: none;
+            color: #ffebee;
+            padding: 15px 20px;
+        }
+
+        .navbar a.active,
+        .navbar a:hover {
+            background-color: #ffebee;
+            color: #f44336;
+        }
+
+        .navbar .right span i {
+            margin-top: 16px;
+            cursor: pointer;
+
+        }
+
+        .navbar span {
+            display: none;
+        }
+
+        .about {
+            background-color: #ffebee;
+            margin-top: 30px;
+        }
+
+        .about h2 {
+
+            text-align: center;
+        }
+
+        .about .line {
+            height: 2px;
+            background-color: black;
+            width: 150px;
+            margin: auto;
+        }
+
+        .about .head {
+            padding: 50px 200px;
+        }
+
+        .skills {
+            background-color: #f44336;
+            margin-top: 30px;
+
+            padding: 40px 100px;
+        }
+
+        .skills h2 {
+            color: white;
+            text-align: center;
+        }
+
+        .skills .line {
+            height: 2px;
+            background-color: rgb(255, 255, 255);
+            width: 100px;
+            margin: auto;
+        }
+
+        .skills .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+            margin-top: 40px;
+
+        }
+
+        .skills .cards {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+
+        }
+
+        .skills .card h4 {
+            color: rgb(0, 0, 0);
+        }
+
+        .career {
+            background-color: #ffebee;
+            margin-top: 30px;
+            padding: 40px 100px;
+        }
+
+        .career .line {
+            height: 2px;
+            background-color: rgb(0, 0, 0);
+            width: 100px;
+            margin: auto;
+        }
+
+        .career h2 {
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+
+        .career .card {
+            width: 300px;
+            margin-top: 40px;
+
+        }
+
+
+        .career .cards {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+
+        }
+
+        .contact {
+            background-color: #f44336;
+            margin-top: 30px;
+
+            padding: 40px 300px;
+        }
+
+        .contact h2 {
+            color: white;
+            text-align: center;
+        }
+
+        .contact .line {
+            height: 2px;
+            background-color: rgb(255, 255, 255);
+            width: 100px;
+            margin: auto;
+        }
+
+        .contact .card h4 {
+            color: rgb(255, 255, 255);
+            font-weight: 400;
+            font-size: 15px;
+        }
+
+        .contact .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100px;
+            margin-top: 40px;
+
+        }
+
+        .contact .cards {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 30px;
+
+
+        }
+
+        @media screen and (max-width: 900px) {
+            .contact {
+
+
+                padding: 40px 150px;
+            }
+
+
+        }
+
+
+
+        @media screen and (max-width: 600px) {
+
+
+
+
+            .navbar span {
+                display: block;
+            }
+
+            .nav-list {
+                display: none;
+            }
+
+
+            .navbar li {
+                display: block;
+            }
+
+            .menuMobile {
+                height: 277px;
+            }
+
+            .ulMobile {
+                display: block;
+            }
+
+            .about .head {
+                padding: 50px 20px;
+            }
+
+
+            .skills .cards {
+                justify-content: center;
+            }
+
+
+            .career {
+
+                padding: 40px 30px;
+
+            }
+
+            .career .card {
+                width: 450px;
+                margin-left: 30px;
+            }
+
+            .contact {
+                padding: 40px 10px;
+            }
+
+            .contact .card {
+                width: 50px;
+            }
+
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-bar">
+        <h3>Portfolio by Hitesh</h3>
+
+    </div>
+    <nav id="navbar" class="navbar">
+        <div class="left">
+            <ul class="nav-list" id="list">
+                <li class="item"><a class="close" href="/">Home</a></li>
+                <li class="item"><a class="close" href="#about">About</a></li>
+                <li class="item"><a class="close" href="#skills">Skills</a></li>
+                <li class="item"><a class="close" href="#career">Career</a></li>
+                <li class="item"><a class="close" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="right">
+
+            <span><i id="menu" class="fa fa-bars" style="color: white; font-size: 25px;"></i></span>
+        </div>
+
+    </nav>
+
+    <section class="about" id="about">
+        <div class="head" style="background: url('https://firebasestorage.googleapis.com/v0/b/iottest2021-7c8db.appspot.com/o/us2.png?alt=media&token=c54f2e3c-6c19-4960-8e5e-82b8cc699456');">
+
+            <h2 style="color: white;">Welcome to My Page</h2>
+            
+            <p style="text-align: center;margin-top: 20px;color: rgba(255, 255, 255, 0.8);">My Name is Hitesh Choudary and I m a Data analayst.</p>
+
+            <div style="display: flex; justify-content: center;margin-top: 30px;">
+                <button style="background-color: #f44336;color: white; border-radius: 45px;padding: 7px 12px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                ">Find Out More</button>
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <section class="about" id="about">
+        <div class="head">
+
+            <h2>About me</h2>
+            <div class="line"></div>
+            <p style="text-align: center;margin-top: 20px;color: rgba(0, 0, 0, 0.651);">I as a Data analyst, srutinises information using data analysis tools. and i pull some meaningful results from the raw data to help clients. so that the clients can make important decisions by identifying various facts and trends</p>
+
+            <div style="display: flex; justify-content: center;margin-top: 30px;">
+                <button style="background-color: #f44336;color: white; border-radius: 45px;padding: 7px 12px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                ">Get
+                    Started</button>
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="head">
+            <h2>Skills</h2>
+            <div class="line"></div>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <span><i class="fa fa-database" style="color: white; font-size: 60px;"></i></span>
+                <h4>SQL</h4>
+            </div>
+
+            <div class="card">
+                <span><i class="fab fa-python" style="color: #cddc39; font-size: 60px;"></i></span>
+                <h4>Python</h4>
+            </div>
+
+            <div class="card">
+                <span><i class="fab fa-steam-symbol" style="color: white; font-size: 60px;"></i></span>
+                <h4>SteamEngine</h4>
+            </div>
+
+            <div class="card">
+                <span><i class="fab fa-microsoft" style="color: #cddc39; font-size: 60px;"></i></span>
+                <h4>MicrosoftAzure</h4>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="career" id="career">
+        <div class="head">
+            <h2>Career</h2>
+            <div class="line"></div>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <h4>2012-2016</h4>
+                <p style="color: rgba(0, 0, 0, 0.651);"> I have completed my under graduation in Data Science from NIT Calicut</p>
+            </div>
+
+            <div class="card">
+                <h4>2016-2020</h4>
+                <p style="color: rgba(0, 0, 0, 0.651);">I worked as Data analyst for Deloitte</p>
+            </div>
+
+            <div class="card">
+                <h4>2020-2022</h4>
+                <p style="color: rgba(0, 0, 0, 0.651);">Right now i am pursuing my masters in Data science at Rowan University</p>
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="head">
+            <h2>My Contact</h2>
+            <div class="line"></div>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <span><a href="tel:123-456-7890"><i class="fa fa-phone" style="color: #cddc39; font-size: 35px;"></i></a></span>
+                <h4>Call</h4>
+            </div>
+
+            <div class="card">
+                <span><a href="mailto:hiteshadusumalli06@gmail.com" target="_blank"><i class="fas fa-envelope" style="color: #cddc39; font-size: 35px;"></i></a></span>
+                <h4>E-Mail</h4>
+            </div>
+
+            <div class="card">
+                <span><a href="https://www.linkedin.com/in/hitesh-chowdary-adusumalli-5b76361a1" target="_blank"><i class="fab fa-linkedin" style="color: #cddc39; font-size: 35px;"></i></a></span>
+                <h4>Linkedin</h4>
+            </div>
+
+            <div class="card">
+                <span><a href="https://github.com/hitesh0697" target="_blank"><i class="fab fa-git-square" style="color: #cddc39; font-size: 35px;"></i></a></span>
+                <h4>GitHub</h4>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="footer" style="background-color: #ffebee;height: 60px;">
+
+        <p style="line-height: 60px; color: rgba(0, 0, 0, 0.651); text-align: center;"> Portfolio Hitesh</p>
+
+    </section>
+    <script>
+        var menu1 = document.getElementById("menu");
+        var Navbar = document.getElementById("navbar");
+        var menulist = document.getElementById("list");
+        var closeMenu = document.getElementsByClassName("close");
+        menu1.addEventListener('click', () => {
+
+            Navbar.classList.toggle("menuMobile");
+            menulist.classList.toggle("ulMobile");
+            //alert("gcfvhb");
+        });
+
+        function go()
+        {
+            Navbar.classList.toggle("menuMobile");
+            menulist.classList.toggle("ulMobile");
+        }
+
+
+        closeMenu[0].addEventListener('click', go);
+        closeMenu[1].addEventListener('click', go);
+        closeMenu[2].addEventListener('click', go);
+        closeMenu[3].addEventListener('click', go);
+        closeMenu[4].addEventListener('click', go);
+
+
+        
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
